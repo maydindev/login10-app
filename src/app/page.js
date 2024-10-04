@@ -2,100 +2,48 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex">
+      <div className="flex flex-col justify-center items-center w-2/5 min-h-screen bg-[#db5b12] text-white">
+      <div className="flex flex-col justify-start items-start">
+        <h1 className="font-bold text-5xl text-center mb-10">
+          Welcome Back
+        </h1>
+          <p>
+            <span>Sign in with yourr credentionals</span>
+            <br />
+            <span>to enjoy our uninterupted services</span>
+          </p>
+          <br />
+          <p className="text-gray-700 mb-10">Don't have an account yet?</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <img src="/cart.png" alt="" className="w-24 h-24" />
+        <button className="border border-white w-[300px] rounded-full p-3 m-10 font-bold">
+          CLICK HERE TO SIGN UP
+        </button>
+      </div>
+      <div className="flex flex-col border w-3/5 min-h-screen">
+        <h1 className="text-5xl text-center font-bold mt-20 mb-10 tracking-wider">SIGN IN TO SHEY</h1>
+        <div className="flex justify-center items-center mb-3">
+          <img src="/google.png" alt="" className="w-10 h-10 mr-10" />
+          <img src="/linkedin.png" alt="" className="w-10 h-10 mr-10" />
+          <img src="/github.png" alt="" className="w-10 h-10" />
+        </div>
+       <div className="m-2 p-2 mb-3 mx-[260px]">
+       <div className="flex items-center">
+          <div className="flex-1 border-t border-black"></div>
+          <span className="mx-4 font-bold text-black">OR</span>
+          <div className="flex-1 border-t border-black"></div>
+        </div>
+       </div>
+
+        <p className="text-center text-xl text-gray-700">use email and password</p>
+
+        <div className="flex flex-col justify-center items-center m-5 p-5">
+          <input type="text" placeholder="Username" className="border rounded-full p-1 pl-5 w-[400px] h-12 bg-gray-100 mb-10"/>
+          <input type="text" placeholder="Password" className="border rounded-full p-1 pl-5 w-[400px] h-12 bg-gray-100 mb-10"/>
+          <button className="bg-[#db5b12] rounded-full w-[400px] p-3 font-bold text-xl text-white">LOGIN</button>
+        </div>
+      </div>
     </div>
   );
 }
